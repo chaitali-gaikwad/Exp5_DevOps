@@ -4,11 +4,15 @@ pipeline {
 	stages {
         stage('Build') { 
             steps {
-                nodejs('LastestNode'){
-					//here your npm commands p.e.
-					npm -v
-					//npm install
-				} 
+				script {
+					nodejs('LastestNode'){
+					
+						//here your npm commands p.e.
+						npm -v
+						//npm install
+						
+					}
+				}
             }
         }
     }
