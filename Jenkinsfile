@@ -1,12 +1,15 @@
 pipeline {
     agent any
-	tools {
-		nodejs 'LastestNode'
-	}
+
 	stages {
         stage('Build') { 
             steps {
-                sh 'npm version' 
+                nodejs('LastestNode'){
+				   //here your npm commands p.e.
+
+				   npm install
+				   npm run prod
+				} 
             }
         }
     }
