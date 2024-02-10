@@ -1,12 +1,12 @@
 pipeline {
     agent any
-	tools {
-		nodejs 'LastestNode'
-	}
-	stages {
-        stage('Build') { 
+
+    stages {
+        stage('Build') {
             steps {
-                sh 'npm -version' 
+                nodejs(nodeJSInstallationName: 'LastestNode') {
+                    sh 'npm -v'
+                }
             }
         }
     }
