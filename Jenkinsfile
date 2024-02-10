@@ -15,7 +15,7 @@ pipeline {
 		
 		stage('Deploy to IIS') {
 			steps {
-				bat 'copy build C:\\inetpub\\wwwroot\\ReactTimetableApp'
+				bat 'Xcopy build C:\\inetpub\\wwwroot\\ReactTimetableApp /E /H /C /I'
 			}
 		}
 	}
