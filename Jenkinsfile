@@ -12,5 +12,11 @@ pipeline {
 				bat 'npm run build'
 			}
 		}
+		
+		stage('Deploy to IIS') {
+			steps {
+				bat 'copy public C:\inetpub\wwwroot\ReactTimetableApp'
+			}
+		}
 	}
 }
