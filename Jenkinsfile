@@ -1,20 +1,10 @@
 pipeline {
-    agent any
-
-	stages {
-        stage('build') {
+     agent any
+     stages {
+        stage("Build") {
             steps {
-                echo "Hello World!"
-            }
-        }
-		
-		stage('npm installation') { 
-            steps {
-				script {
-					nodejs('LastestNode'){
-						npm -v
-					}
-				}
+                sh "sudo npm install"
+                sh "sudo npm run build"
             }
         }
     }
