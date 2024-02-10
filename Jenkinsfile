@@ -2,9 +2,14 @@ pipeline {
 	agent any
 	tools {nodejs "LastestNode"}
 	stages {
-		stage('Build') {
+		stage('install npm packages') {
 			steps {
 				bat 'npm install'
+			}
+		}		
+		stage('Build project') {
+			steps {
+				bat 'npm run build'
 			}
 		}
 	}
