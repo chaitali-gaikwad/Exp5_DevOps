@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	tools {
-		nodejs '20.11.0'
+		nodejs 'v20.11.0'
 	}
 	stages {
         stage('Build') { 
