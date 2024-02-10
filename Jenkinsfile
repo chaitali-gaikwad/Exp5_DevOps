@@ -5,10 +5,9 @@ pipeline {
         stage('Build') { 
             steps {
                 nodejs('LastestNode'){
-				   //here your npm commands p.e.
-
-				   npm install
-				   npm run prod
+					//here your npm commands p.e.
+					npm -v
+					//npm install
 				} 
             }
         }
