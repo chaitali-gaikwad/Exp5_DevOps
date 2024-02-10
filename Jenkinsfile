@@ -1,13 +1,12 @@
 pipeline {
-    agent any
-
-    stages {
-        stage('Build') {
-            steps {
-                nodejs(nodeJSInstallationName: 'LastestNode') {
-                    sh 'npm -v'
-                }
-            }
-        }
-    }
+	agent any
+	tools {nodejs "LastestNode"}
+	stages {
+		stage('Build') {
+			steps {
+				git 'https://github.com/chaitali-gaikwad/Exp5_DevOps'
+				bat 'npm install'
+			}
+		}
+	}
 }
