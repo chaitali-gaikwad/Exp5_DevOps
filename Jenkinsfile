@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	tools {
-		RecentNode
+		RecentNode '20.11.0'
 	}
 	stages {
         stage('Build') { 
