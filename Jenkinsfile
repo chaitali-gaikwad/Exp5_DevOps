@@ -1,7 +1,7 @@
 pipeline {
     agent any
 	tools {
-		LastestNode 'LastestNode'
+		LatestNode 'LatestNode'
 	}
 	stages {
         stage('Build') { 
