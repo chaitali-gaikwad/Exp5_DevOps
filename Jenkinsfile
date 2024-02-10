@@ -7,5 +7,15 @@ pipeline {
                 echo "Hello World!"
             }
         }
+		
+		stage('npm installation') { 
+            steps {
+				script {
+					nodejs('LastestNode'){
+						npm -v
+					}
+				}
+            }
+        }
     }
 }
